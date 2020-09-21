@@ -19,7 +19,7 @@ public class DataGenerator {
         System.out.println("The size of the list will be " + size);
         int temp = 0;
         while (temp < size) {
-            dataList.add(new MySampleObject(random.nextInt(), RandomStringUtils.random(10)));
+            dataList.add(new MySampleObject(random.nextInt(), RandomStringUtils.randomAlphabetic(10)));
             temp++;
         }
         System.out.println("The data list has been generated");

@@ -13,6 +13,7 @@ public class MySampleWriter implements ItemWriter<List<MySampleObject>> {
 
     @Override
     public void write(List<? extends List<MySampleObject>> items) throws Exception {
+        System.out.println("Writing the data");
         System.out.println("Finished writing the data");
     }
 }

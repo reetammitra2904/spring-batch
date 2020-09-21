@@ -20,13 +20,11 @@ public class MySampleReader implements ItemReader<List<MySampleObject>> {
 
     @Override
     public List<MySampleObject> read() throws Exception, UnexpectedInputException, ParseException, NonTransientResourceException {
-        System.out.println("The test parameter is " + testParameter);
         count++;
         if (count == 1) {
+            System.out.println("Reading the data");
             return DataGenerator.generateData();
         }
-        System.out.println("The value of count is " + count);
-        System.out.println("Fetching data");
         return null;
     }
 

@@ -98,16 +98,4 @@ public class JobManager {
         }
         return null;
     }
-
-    private StepExecution findRunningStep(String jobName) {
-        if (isJobRunning(jobName)) {
-            JobExecution jobExecution = getJobExecution(jobName);
-            for (StepExecution stepExecution : jobExecution.getStepExecutions()) {
-                if (stepExecution.getStatus().equals(BatchStatus.STARTED)) {
-                    return stepExecution;
-                }
-            }
-        }
-        return null;
-    }
 }
